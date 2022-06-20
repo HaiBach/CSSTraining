@@ -1,1 +1,1 @@
-# CSSRule
+# CSS TRAINING
