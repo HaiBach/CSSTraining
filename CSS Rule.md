@@ -10,7 +10,7 @@ Cấu trúc của một css bao gồm:
 selector { property: value; property: value; }
 ```
 
-![CSS Syntax](/assets/img/css-syntax.png)
+![CSS Syntax](/assets/img/css-syntax.svg)
 
 
 
