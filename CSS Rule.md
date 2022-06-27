@@ -14,7 +14,7 @@ selector { property: value; property: value; }
 
 
 
-## ❤ **QUY TẮC KHI VIẾT CSS**
+## ❤ **QUY TẮC KHI VIẾT CSS** ❤
 
 
 ### **1. Quy tắc chung**
