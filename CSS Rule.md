@@ -16,21 +16,56 @@ selector { property: value; property: value; }
 
 ## ❤ **QUY TẮC KHI VIẾT CSS**
 
-### **1 - Quy tắc chung**
 
-1.1 Định nghĩa mã hoá ký tự bằng chuẩn `UTF-8` và được thiết lập ở các dòng đầu tiên của file css.
+### **1. Quy tắc chung**
+
+1.1
+
+Ưu tiên sử dụng Sass để viết css, và tách các style thành từng file nhỏ để dễ quản lý, dễ viết css.
+
+[sass-lang.com](https://sass-lang.com/)
+
+Quản lý các file scss thành nhiều file nhỏ
+
+``` css
+scss
+| _reset.scss
+| _common.scss
+| _header.scss
+| _footer.scss
+| _button.scss
+| ...
+style.scss
+```
+
+
+1.2
+
+Định nghĩa mã hoá ký tự bằng chuẩn `UTF-8` và được thiết lập ở các dòng đầu tiên của file css.
 
 ``` css
 @charset "charset";
 ``` 
 
-1.2 Indent nên sử dụng: 2 khoảng trắng (space).
 
-1.3 Bắt buộc sử dụng dấu ; khi kết thúc 1 declaration.
+1.3
 
-1.4 Mỗi một declaration nên viết trên 1 dòng một, không nên gộp các declaration trên cùng 1 dòng.
+Indent nên sử dụng: 2 khoảng trắng (space).
 
-1.5 Khi viết css phải có khoảng trắng giữa selector - property - value để trình bày rõ ràng và dễ nhìn hơn.
+
+1.4
+
+Bắt buộc sử dụng dấu ; khi kết thúc 1 declaration.
+
+
+1.5
+
+Mỗi một declaration nên viết trên 1 dòng một, không nên gộp các declaration trên cùng 1 dòng.
+
+
+1.6
+
+Khi viết css phải có khoảng trắng giữa selector - property - value để trình bày rõ ràng và dễ nhìn hơn.
 
 ``` css
 /* Không nên */
@@ -44,7 +79,10 @@ h1 {
 ```
 
 
-1.6 Các declaration được nhớm lại với nhau theo chức năng và sắp xếp theo thứ tự: 
+1.7
+
+Các declaration được nhớm lại với nhau theo chức năng và sắp xếp theo thứ tự:
+
 1. Vị trí
 2. Kích thước
 3. Khoảng cách
@@ -115,7 +153,9 @@ nav {
 ```
 
 
-1.7 Hạn chế sử dụng thuộc tính `!important`.
+1.8
+
+Hạn chế sử dụng thuộc tính `!important`.
 Chừng nào không tìm giải pháp thay thế và cần thiết lắm thì mới sử dụng thuộc tính `!important`.
 
 ``` css
@@ -131,7 +171,9 @@ h1 {
 ```
 
 
-1.8 Ưu tiên viết `@media` trong từng block/section để kiểm soát css tốt hơn
+1.9
+
+Ưu tiên viết `@media` trong từng block/section để kiểm soát css tốt hơn
 
 ``` css
 /* Không nên */
@@ -146,9 +188,11 @@ h1 {
 
 
 
-### **2 - Đặt tên**
+### **2. Đặt tên**
 
-2.1 Nên sử dụng quy tắc BEM cho việc đặc tên.
+2.1
+
+Nên sử dụng quy tắc BEM cho việc đặc tên.
 
 [Get BEM](http://getbem.com/naming/)
 
@@ -159,7 +203,9 @@ h1 {
 ```
 
 
-2.2 Tên của css được viết bằng chữ thường (lowercase), hạn chế sử dụng tên viết hoa (capitalize), hoặc chữ in hoa (uppercase).
+2.2
+
+Tên của css được viết bằng chữ thường (lowercase), hạn chế sử dụng tên viết hoa (capitalize), hoặc chữ in hoa (uppercase).
 
 ``` css
 /* Không nên */
@@ -172,9 +218,11 @@ h1 {
 
 
 
-### **3 - Viết ngắn gọn**
+### **3. Viết ngắn gọn**
 
-3.1 Hạn chế viết các selector lồng với nhau (nested) và các ancestor selector không cần thiết. Việc này giúp ít rất nhiều để code css dễ đọc, dễ tuỳ chỉnh, tiết kiệm thời gian khi chỉnh sửa.
+3.1
+
+Hạn chế viết các selector lồng với nhau (nested) và các ancestor selector không cần thiết. Việc này giúp ít rất nhiều để code css dễ đọc, dễ tuỳ chỉnh, tiết kiệm thời gian khi chỉnh sửa.
 
 ``` css
 /* Không nên */
@@ -187,7 +235,9 @@ nav a {}
 ```
 
 
-3.2 Loại bỏ đơn vị (unit) nếu giá trị là `0`
+3.2
+
+Loại bỏ đơn vị (unit) nếu giá trị là `0`
 
 ``` css
 a {
@@ -197,7 +247,9 @@ a {
 ```
 
 
-3.3 Loại bỏ số `0` nếu giá trị có dáu thập phân
+3.3
+
+Loại bỏ số `0` nếu giá trị có dáu thập phân
 
 ``` css
 h1 {
@@ -211,7 +263,9 @@ h1 {
 ```
 
 
-3.4 Giá trị màu sắc HEX nên sử dụng hình thức giản lược (3 ký tự) nếu có thể.
+3.4
+
+Giá trị màu sắc HEX nên sử dụng hình thức giản lược (3 ký tự) nếu có thể.
 
 ``` css
 /* Không nên */
@@ -227,6 +281,7 @@ a {
 
 
 3.5
+
 a. Nên sử dụng cấu trúc shorthand khi selector có đầy đủ thuộc tính đó. Ví dụ selector có đầy đủ 4 thuộc tính của padding: `padding-top`, `padding-right`, `padding-bottom` và `padding-left` 
 
 ``` css
@@ -244,6 +299,7 @@ ul {
 }
 ```
 
+
 b. Nhưng khi chúng ta chỉ cần css một thuộc tính riêng lẻ (ví dụ: padding-top), thì ta cũng hạn ché sử dụng cấu trúc shorthand để tránh dư thừa và khó kiểm soát khi viết css.
 
 ``` css
@@ -257,5 +313,3 @@ ul {
   padding-top: 10px;
 }
 ```
-
-
